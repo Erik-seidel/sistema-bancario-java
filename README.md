@@ -1,51 +1,60 @@
 # Sistema Bancário em Java
 
-Aplicação desenvolvida para simular operações bancárias, utilizando conceitos de Programação Orientada a Objetos.
+Aplicação desenvolvida em Java com foco na prática de Programação Orientada a Objetos (POO), simulando operações bancárias essenciais como criação e gerenciamento de contas, transações e histórico.
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
-- Criação de contas com número de agência e conta automáticos
-- Depósito em conta
-- Saque com validação de saldo
-- Listagem de contas cadastradas
-
----
-
-## 🧠 Conceitos aplicados
-
-- Programação Orientada a Objetos (POO)
-- Encapsulamento
-- Estruturas de dados (ArrayList)
-- Regras de negócio
+- Criação de conta com geração automática de agência e número  
+- Acesso a conta existente  
+- Depósito de valores  
+- Saque com validação de saldo   
+- Histórico de transações  
+- Validação de regras de negócio (ex: impedir saldo negativo)  
 
 ---
 
-## 🛠 Tecnologias utilizadas
+## Conceitos aplicados
 
-- Java
+- Programação Orientada a Objetos (POO)  
+- Encapsulamento  
+- Organização de classes e responsabilidades  
+- Manipulação de estados  
+- Estruturação de lógica de negócio  
 
 ---
 
-## ▶️ Como executar
+## Tecnologias utilizadas
+
+- Java  
+- IntelliJ / Eclipse / VS Code  
+
+---
+
+## Como executar o projeto
 
 1. Clone o repositório:
+```bash
+git clone https://github.com/Erik-seidel/sistema-bancario-java.git
+Acesse a pasta do projeto:
+cd sistema-bancario-java
+Compile e execute:
+javac App.java
+java App
 
-2. Abra o projeto em uma IDE (IntelliJ, Eclipse ou VS Code)
+Estrutura do projeto
+Account.java → representa uma conta bancária
+Bank.java → gerencia as contas
+App.java → interface com o usuário
 
-3. Execute a classe principal (`Main`)
+Melhorias recentes
+Implementação do histórico de operações
+Adição de funcionalidade de acesso à conta
+Refinamento da estrutura de dados
+Melhor organização da lógica do sistema
 
----
+Autor
 
-## 🎯 Objetivo
-
-Praticar lógica de programação e estruturação de sistemas backend, simulando operações reais de um sistema bancário.
-
----
-
-## 📌 Melhorias futuras
-
-- Implementar histórico de transações
-- Criar interface gráfica
-- Transformar em API com Spring Boot
+Erik Seidel
+LinkedIn: www.linkedin.com/in/erik-gabriel-seidel-792b643b7

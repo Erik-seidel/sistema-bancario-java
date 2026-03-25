@@ -1,15 +1,20 @@
 package ex.banco.bank;
 
-public class Login {
+import javax.print.DocFlavor;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Account {
     private static final int MAX_LENGTH = 12;
     private String agen;
     private String cc;
     private String ac;
     private double balance;
     private Log logger;
+    private List<String> his = new ArrayList<>();
 
 
-    public Login(String agen, String cc, String ac) {
+    public Account(String agen, String cc, String ac) {
         this.agen = agen;
         this.cc = cc;
         setname(ac);
@@ -26,7 +31,8 @@ public class Login {
 
     public void deposit(double value){
          balance += value;
-         logger.out("DEPOSITO - Valor depositado, sua conta agora é R$" + balance);
+         logger.out("DEPOSITO DE R$" +value+ " - Valor depositado, sua conta agora é R$" + balance);
+         his.add("DEPOSITO DE R$" +value+ " - Valor depositado, sua conta agora é R$" + balance);
     }
 
     public boolean withDraw(double value) {
@@ -35,7 +41,8 @@ public class Login {
             return false;
         } else {
             balance -= value;
-            logger.out("Saque efetuado, sua conta agora é R$" + balance);
+            logger.out("Saque de " +value+ " efetuado, sua conta agora é R$" + balance);
+            his.add("Saque de " +value+ " efetuado, sua conta agora é R$" + balance);
             return true;
         }
     }
@@ -44,8 +51,21 @@ public class Login {
         return balance;
     }
 
+    public String getCc() {
+        return cc;
+    }
+
+    public String getAc() {
+        return ac;
+    }
+
     @Override
     public String toString() {
         return "A conta de " + this.ac + " " + this.agen + "/" + this.cc + " " + "Possui um total de R$" + this.balance;
+    }
+    public void gethis(){
+        for (String item : his){
+            System.out.println(item);
+        }
     }
 }
